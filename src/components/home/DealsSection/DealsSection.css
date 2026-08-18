@@ -1,0 +1,305 @@
+/* ==========================================================================
+   DEALS & FLASH DROP SECTION STYLES
+   ========================================================================== */
+
+.luxury-deals-section {
+  padding: 80px 0;
+  position: relative;
+  background: #0D0D0D;
+  overflow: hidden;
+}
+
+.deals-ambient-glow {
+  position: absolute;
+  top: 40%;
+  right: 15%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(193, 18, 47, 0.2) 0%, transparent 70%);
+  filter: blur(70px);
+  pointer-events: none;
+}
+
+.deals-header-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 44px;
+  flex-wrap: wrap;
+}
+
+.deals-main-heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 0;
+}
+
+.live-pulse-dot {
+  width: 7px;
+  height: 7px;
+  background: var(--color-crimson-bright);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--color-crimson-bright);
+  animation: pulseGlow 1.2s infinite;
+}
+
+/* Countdown Box */
+.deals-countdown-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(18, 18, 18, 0.85);
+  border: 1px solid var(--color-border-crimson);
+  padding: 10px 20px;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 8px 24px rgba(193, 18, 47, 0.2);
+}
+
+.countdown-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--color-crimson-bright);
+  letter-spacing: 1.5px;
+}
+
+.countdown-digits {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.time-digit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.digit-val {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--color-text);
+  line-height: 1;
+}
+
+.digit-unit {
+  font-size: 0.58rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+}
+
+.time-colon {
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  color: var(--color-crimson-bright);
+  line-height: 1;
+}
+
+.highlight-crimson .digit-val {
+  color: var(--color-crimson-bright);
+}
+
+/* Compact Deal Cards Grid */
+.deals-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.compact-deal-card {
+  background: #151515;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.compact-deal-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-crimson);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.65), 0 0 25px rgba(193, 18, 47, 0.2);
+}
+
+.deal-image-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 0.85;
+  background: #111111;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.deal-image {
+  max-width: 85%;
+  max-height: 85%;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.compact-deal-card:hover .deal-image {
+  transform: scale(1.08);
+}
+
+.deal-discount-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--color-crimson);
+  color: #FFFFFF;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 4px 8px;
+  border-radius: var(--radius-xs);
+  box-shadow: 0 2px 8px rgba(193, 18, 47, 0.4);
+}
+
+.deal-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.deal-category {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--color-crimson-bright);
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.deal-title {
+  font-size: 0.96rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.35;
+}
+
+.deal-title a {
+  color: var(--color-text);
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.deal-title a:hover {
+  color: var(--color-crimson-bright);
+}
+
+.deal-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.deal-sale-price {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--color-text);
+}
+
+.deal-orig-price {
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  text-decoration: line-through;
+}
+
+/* Progress Claimed */
+.deal-progress-box {
+  margin-bottom: 16px;
+}
+
+.progress-label-row {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  margin-bottom: 4px;
+}
+
+.deal-progress-bar-bg {
+  width: 100%;
+  height: 6px;
+  background: #222222;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.deal-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #7F0B20 0%, #E21B3C 100%);
+  border-radius: 999px;
+}
+
+/* CTA */
+.deal-cta-btn {
+  width: 100%;
+  height: 40px;
+  background: var(--color-crimson);
+  color: #FFFFFF;
+  border: none;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  margin-top: auto;
+}
+
+.deal-cta-btn:hover {
+  background: var(--color-crimson-bright);
+  box-shadow: 0 4px 16px rgba(226, 27, 60, 0.45);
+}
+
+.deals-view-all-row {
+  display: flex;
+  justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .deals-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .deals-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .deals-countdown-box {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 360px) {
+  .deals-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

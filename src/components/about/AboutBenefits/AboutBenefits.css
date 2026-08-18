@@ -1,0 +1,89 @@
+/* ==========================================================================
+   ABOUT SERVICE BENEFITS PANEL (MATCHING REFERENCE EXACTLY)
+   ========================================================================== */
+
+.about-benefits-panel-section {
+  padding: 24px 0 44px;
+}
+
+.about-benefits-panel {
+  background: #0E0E0E;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 44px 32px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+}
+
+.about-benefit-col {
+  padding: 0 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.about-benefit-col:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 10%;
+  height: 80%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.about-benefit-icon-ring {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border-crimson);
+  background: rgba(224, 0, 42, 0.08);
+  color: var(--color-crimson);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin-bottom: 18px;
+  transition: var(--transition-fast);
+}
+
+.about-benefit-col:hover .about-benefit-icon-ring {
+  background: var(--color-crimson);
+  color: #FFFFFF;
+  border-color: var(--color-crimson);
+  transform: scale(1.1);
+}
+
+.about-benefit-col-title {
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+}
+
+.about-benefit-col-desc {
+  font-size: 0.84rem;
+  color: #777777;
+  line-height: 1.55;
+  margin-bottom: 0;
+  max-width: 280px;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .about-benefits-panel {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 36px 20px;
+  }
+  .about-benefit-col:not(:last-child)::after {
+    display: none;
+  }
+  .about-benefit-col {
+    padding: 0;
+  }
+}

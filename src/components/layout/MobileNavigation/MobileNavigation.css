@@ -1,0 +1,110 @@
+/* ==========================================================================
+   MOBILE FLOATING BOTTOM NAVIGATION — CRIMSON + BLACK BOLD LUXURY
+   ========================================================================== */
+
+.mobile-bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 36px);
+  max-width: 360px;
+  height: 58px;
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.75), 0 0 25px rgba(224, 0, 42, 0.15);
+  z-index: 1050;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 12px;
+}
+
+.mobile-bottom-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  color: var(--text-secondary, #B8B5B3);
+  text-decoration: none !important;
+  padding: 5px 8px;
+  border-radius: 999px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  min-width: 52px;
+  position: relative;
+}
+
+.mobile-bottom-icon {
+  font-size: 1.15rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+.mobile-bottom-label {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  transition: color 0.2s ease;
+}
+
+.mobile-bottom-item:hover {
+  color: var(--white, #F5F2EE);
+}
+
+.mobile-bottom-item.active {
+  color: var(--crimson-bright, #FF1744) !important;
+}
+
+.mobile-bottom-item.active .mobile-bottom-icon {
+  transform: translateY(-2px);
+  color: var(--crimson-bright, #FF1744);
+}
+
+.mobile-bottom-item.active .mobile-bottom-label {
+  color: var(--white, #F5F2EE);
+  font-weight: 700;
+}
+
+.cart-icon-wrap {
+  position: relative;
+}
+
+.mobile-cart-badge {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  border-radius: 999px;
+  background: var(--crimson, #E0002A);
+  color: #FFFFFF;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 991px) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+
+  /* Add bottom padding so footer/page content is never covered */
+  .layout-content {
+    padding-bottom: 74px;
+  }
+}
+

@@ -1,0 +1,245 @@
+/* ==========================================================================
+   PROMO SECTION (MATCHING REFERENCE SPLIT CARDS)
+   ========================================================================== */
+
+.reference-promo-section {
+  padding: 24px 0 44px;
+}
+
+.reference-promo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+/* Left Card: Bold Products */
+.promo-card-left {
+  position: relative;
+  background: radial-gradient(circle at top left, #1c080e 0%, #111111 60%, #080808 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 48px 44px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 420px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+}
+
+.promo-silk-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 100% 100%, rgba(212, 20, 54, 0.18) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.promo-card-content {
+  position: relative;
+  z-index: 2;
+}
+
+.promo-ref-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--color-crimson);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.promo-ref-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.2vw, 2.8rem);
+  font-weight: 900;
+  line-height: 1.15;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+}
+
+.promo-title-crimson {
+  color: var(--color-crimson);
+  font-family: var(--font-display);
+  font-weight: 900;
+}
+
+.promo-ref-desc {
+  font-size: 0.92rem;
+  color: #B8B3AE;
+  line-height: 1.6;
+  max-width: 420px;
+  margin-bottom: 30px;
+}
+
+.promo-ref-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.promo-primary-btn {
+  height: 44px;
+  padding: 0 24px;
+  font-size: 0.78rem;
+}
+
+.promo-secondary-btn {
+  height: 44px;
+  padding: 0 20px;
+  font-size: 0.78rem;
+}
+
+/* Right Card: 50% OFF */
+.promo-card-right {
+  position: relative;
+  background: #0D0D0D;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 48px 44px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 420px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+}
+
+.promo-gift-bg-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.promo-gift-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.35;
+  filter: contrast(1.2) brightness(0.7);
+}
+
+.promo-gift-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(13, 13, 13, 0.6) 0%, rgba(13, 13, 13, 0.95) 100%);
+}
+
+.promo-sale-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sale-up-to {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #B8B3AE;
+  margin-bottom: 4px;
+}
+
+.sale-percentage-headline {
+  font-family: var(--font-display);
+  font-size: clamp(3.2rem, 5vw, 4.4rem);
+  font-weight: 900;
+  line-height: 1;
+  color: #FFFFFF;
+  margin-bottom: 6px;
+}
+
+.sale-badge-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: #FFFFFF;
+  margin-bottom: 24px;
+}
+
+/* Countdown Row */
+.sale-countdown-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.sale-timer-box {
+  background: rgba(18, 18, 18, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(212, 20, 54, 0.4);
+  border-radius: 8px;
+  padding: 8px 14px;
+  min-width: 58px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.timer-number {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-crimson);
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+.timer-label {
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #77736F;
+}
+
+.sale-shop-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: #FFFFFF !important;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  height: 44px;
+  padding: 0 24px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: var(--transition-fast);
+  text-decoration: none !important;
+}
+
+.sale-shop-btn:hover {
+  border-color: var(--color-crimson);
+  color: var(--color-crimson) !important;
+  background: rgba(212, 20, 54, 0.08);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .reference-promo-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .promo-card-left,
+  .promo-card-right {
+    padding: 36px 20px;
+  }
+  .sale-countdown-row {
+    gap: 8px;
+  }
+  .sale-timer-box {
+    padding: 6px 10px;
+    min-width: 48px;
+  }
+}

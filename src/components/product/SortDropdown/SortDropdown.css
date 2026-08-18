@@ -1,0 +1,67 @@
+/* ==========================================================================
+   SORT DROPDOWN — CRIMSON + BLACK BOLD LUXURY
+   ========================================================================== */
+
+.luxury-sort-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--surface, #111111);
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.10));
+  border-radius: var(--radius-sm, 10px);
+  padding: 6px 14px;
+  height: 38px;
+  transition: border-color 0.2s ease;
+}
+
+.luxury-sort-control:hover,
+.luxury-sort-control:focus-within {
+  border-color: var(--crimson, #E0002A);
+}
+
+.sort-icon-prefix {
+  color: var(--crimson, #E0002A);
+  font-size: 1.1rem;
+}
+
+.sort-by-text {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: var(--text-secondary, #B8B5B3);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.sort-select-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.luxury-sort-select {
+  background: transparent;
+  border: none;
+  color: var(--white, #F5F2EE);
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 700;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  outline: none;
+  padding-right: 18px;
+}
+
+.luxury-sort-select option {
+  background: #111111;
+  color: #F5F2EE;
+  padding: 8px;
+}
+
+.sort-caret {
+  position: absolute;
+  right: 0;
+  pointer-events: none;
+  color: var(--text-muted, #777777);
+  font-size: 0.7rem;
+}

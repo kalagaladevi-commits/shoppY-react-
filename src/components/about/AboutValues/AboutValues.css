@@ -1,0 +1,114 @@
+/* ==========================================================================
+   ABOUT VALUES SECTION (MATCHING REFERENCE EXACTLY)
+   ========================================================================== */
+
+.about-values-section {
+  padding: 44px 0 54px;
+}
+
+.about-values-header {
+  margin-bottom: 40px;
+}
+
+.about-values-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--color-crimson);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.about-values-title {
+  font-size: clamp(2rem, 3.4vw, 2.8rem);
+  font-weight: 900;
+  color: #FFFFFF;
+  letter-spacing: 0.03em;
+  margin-bottom: 8px;
+}
+
+.about-values-sub {
+  font-size: 0.92rem;
+  color: #B8B5B3;
+  line-height: 1.6;
+}
+
+/* 4 Cards Grid */
+.about-values-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.about-value-card-item {
+  background: #0E0E0E;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 36px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: var(--transition);
+  min-height: 200px;
+  justify-content: center;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+}
+
+.about-value-card-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(224, 0, 42, 0.5);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7), 0 0 20px rgba(224, 0, 42, 0.15);
+  background: radial-gradient(circle at center, #18090d 0%, #0e0e0e 80%);
+}
+
+.about-val-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(224, 0, 42, 0.08);
+  border: 1px solid var(--color-border-crimson);
+  color: var(--color-crimson);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+  transition: var(--transition-fast);
+}
+
+.about-value-card-item:hover .about-val-icon-box {
+  background: var(--color-crimson);
+  color: #FFFFFF;
+  border-color: var(--color-crimson);
+  transform: scale(1.1);
+}
+
+.about-val-card-title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 6px;
+}
+
+.about-val-card-desc {
+  font-size: 0.8rem;
+  color: #777777;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .about-values-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .about-values-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

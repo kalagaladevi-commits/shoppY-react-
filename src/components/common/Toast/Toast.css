@@ -1,0 +1,114 @@
+/* Luxury Toast Notifications */
+.luxury-toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 380px;
+  width: calc(100% - 32px);
+  pointer-events: none;
+}
+
+.luxury-toast {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  background: rgba(18, 18, 18, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
+  color: var(--color-text);
+  font-size: 0.92rem;
+  animation: slideInUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transition: var(--transition);
+}
+
+.luxury-toast-crimson {
+  border-color: var(--color-border-crimson);
+  box-shadow: 0 10px 30px rgba(193, 18, 47, 0.25);
+}
+
+.luxury-toast-crimson .toast-icon {
+  color: var(--color-crimson-bright);
+}
+
+.luxury-toast-wishlist {
+  border-color: rgba(226, 27, 60, 0.4);
+}
+
+.luxury-toast-wishlist .toast-icon {
+  color: var(--color-crimson-bright);
+}
+
+.luxury-toast-success .toast-icon {
+  color: var(--color-success);
+}
+
+.luxury-toast-error {
+  border-color: rgba(229, 72, 77, 0.4);
+}
+
+.luxury-toast-error .toast-icon {
+  color: var(--color-error);
+}
+
+.toast-icon {
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.toast-message {
+  flex: 1;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.toast-close-btn {
+  background: transparent;
+  border: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 50%;
+  transition: var(--transition-fast);
+}
+
+.toast-close-btn:hover {
+  color: var(--color-text);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .luxury-toast-container {
+    bottom: 84px; /* avoid floating mobile bar */
+    right: 16px;
+    left: 16px;
+    max-width: none;
+    width: auto;
+  }
+}

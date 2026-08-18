@@ -1,0 +1,170 @@
+/* ==========================================================================
+   PRODUCT GRID — 3-COLUMN CRIMSON + BLACK LAYOUT
+   ========================================================================== */
+
+.luxury-products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.grid-item-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Empty State */
+.product-grid-empty {
+  text-align: center;
+  padding: 60px 24px;
+  background: var(--surface, #111111);
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.10));
+  border-radius: var(--radius-lg, 16px);
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.empty-state-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(224, 0, 42, 0.12);
+  border: 1px solid var(--border-crimson, rgba(224, 0, 42, 0.35));
+  color: var(--crimson-bright, #FF1744);
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+}
+
+.empty-state-title {
+  font-family: var(--font-display, "Playfair Display", serif);
+  font-size: 1.5rem;
+  color: var(--white, #F5F2EE);
+  margin-bottom: 10px;
+}
+
+.empty-state-text {
+  font-size: 0.88rem;
+  color: var(--text-secondary, #B8B5B3);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.empty-reset-btn {
+  margin: 0 auto;
+}
+
+/* Skeleton Loading State */
+.product-grid-loading {
+  width: 100%;
+}
+
+.luxury-grid-skeleton {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.skeleton-card {
+  background: var(--surface, #111111);
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.08));
+  border-radius: var(--radius-md, 14px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.skeleton-img {
+  height: 200px;
+  background: linear-gradient(90deg, #151515 25%, #202020 50%, #151515 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.skeleton-body {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skeleton-tag {
+  width: 60px;
+  height: 12px;
+  border-radius: 4px;
+  background: #202020;
+}
+
+.skeleton-title {
+  width: 80%;
+  height: 18px;
+  border-radius: 4px;
+  background: #222222;
+}
+
+.skeleton-desc {
+  width: 100%;
+  height: 14px;
+  border-radius: 4px;
+  background: #181818;
+}
+
+.skeleton-price {
+  width: 70px;
+  height: 22px;
+  border-radius: 4px;
+  background: #242424;
+  margin-top: 6px;
+}
+
+.skeleton-btn {
+  width: 100%;
+  height: 40px;
+  border-radius: 999px;
+  background: #202020;
+  margin-top: 8px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Responsive Grid */
+@media (max-width: 1200px) {
+  .luxury-products-grid,
+  .luxury-grid-skeleton {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 991px) {
+  .luxury-products-grid,
+  .luxury-grid-skeleton {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .luxury-products-grid,
+  .luxury-grid-skeleton {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+@media (max-width: 380px) {
+  .luxury-products-grid,
+  .luxury-grid-skeleton {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,81 @@
+/* ==========================================================================
+   SOCIAL LOGIN BUTTONS — CRIMSON + BLACK BOLD LUXURY
+   ========================================================================== */
+
+.luxury-social-auth-section {
+  width: 100%;
+  margin: 22px 0 18px;
+}
+
+.social-divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.social-divider-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.social-divider-text {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--text-muted, #77736F);
+}
+
+.social-buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.social-auth-btn {
+  height: 42px;
+  background: #151515;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: var(--radius-sm, 10px);
+  color: var(--white, #F5F2EE);
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.social-auth-btn:hover {
+  background: #1C1C1C;
+  border-color: rgba(210, 10, 46, 0.45);
+  transform: translateY(-1px);
+}
+
+.social-icon-google {
+  color: #EA4335;
+  font-size: 0.95rem;
+}
+
+.social-icon-apple {
+  color: #FFFFFF;
+  font-size: 1rem;
+}
+
+.social-icon-facebook {
+  color: #1877F2;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 420px) {
+  .social-auth-btn {
+    font-size: 0.76rem;
+    gap: 6px;
+    padding: 0 4px;
+  }
+}

@@ -1,0 +1,82 @@
+/* ==========================================================================
+   SERVICE BENEFITS STRIP (MATCHING REFERENCE EXACTLY)
+   ========================================================================== */
+
+.reference-benefits-section {
+  padding: 16px 0 32px;
+}
+
+.reference-benefits-strip {
+  background: #0D0D0D;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 24px 32px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+}
+
+.reference-benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.benefit-icon-ring {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border-crimson);
+  background: rgba(212, 20, 54, 0.08);
+  color: var(--color-crimson);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  transition: var(--transition-fast);
+}
+
+.reference-benefit-item:hover .benefit-icon-ring {
+  background: var(--color-crimson);
+  color: #FFFFFF;
+  border-color: var(--color-crimson);
+  transform: scale(1.08);
+}
+
+.benefit-text-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.benefit-title {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+  margin-bottom: 2px;
+}
+
+.benefit-desc {
+  font-size: 0.74rem;
+  color: #77736F;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .reference-benefits-strip {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+  }
+}
+
+@media (max-width: 540px) {
+  .reference-benefits-strip {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}

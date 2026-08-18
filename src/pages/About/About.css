@@ -1,0 +1,10 @@
+/* ==========================================================================
+   ABOUT PAGE ROOT STYLES (CRIMSON + BLACK BOLD LUXURY)
+   ========================================================================== */
+
+.about-page-root {
+  background-color: var(--color-bg);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}

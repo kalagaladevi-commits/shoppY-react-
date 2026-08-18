@@ -1,0 +1,102 @@
+/* ==========================================================================
+   AUTH BENEFITS BAR — CRIMSON + BLACK BOLD LUXURY
+   ========================================================================== */
+
+.luxury-auth-benefits-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: #0F0F0F;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: var(--radius-xl, 20px);
+  padding: 24px 28px;
+  width: 100%;
+  max-width: 1080px;
+  margin: 38px auto 0;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.auth-benefit-column {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  position: relative;
+  padding: 0 16px;
+}
+
+.benefit-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(210, 10, 46, 0.10);
+  border: 1.5px solid rgba(210, 10, 46, 0.4);
+  color: var(--crimson-bright, #F0183D);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.auth-benefit-column:hover .benefit-icon-box {
+  transform: scale(1.08);
+  border-color: var(--crimson, #D20A2E);
+  box-shadow: 0 0 14px rgba(210, 10, 46, 0.3);
+}
+
+.benefit-text-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.benefit-title {
+  font-family: var(--font-sans);
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--white, #F5F2EE);
+  margin-bottom: 3px;
+  letter-spacing: 0.02em;
+}
+
+.benefit-desc {
+  font-size: 0.74rem;
+  color: var(--text-secondary, #A7A3A0);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.benefit-divider-desktop {
+  position: absolute;
+  right: 0;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .luxury-auth-benefits-bar {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .benefit-divider-desktop {
+    display: none;
+  }
+}
+
+@media (max-width: 580px) {
+  .luxury-auth-benefits-bar {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 18px 16px;
+    margin-top: 24px;
+    border-radius: 16px;
+  }
+
+  .auth-benefit-column {
+    padding: 0;
+  }
+}

@@ -1,0 +1,149 @@
+/* ==========================================================================
+   ORDER SUMMARY CARD — CRIMSON + BLACK BOLD LUXURY
+   ========================================================================== */
+
+.luxury-order-summary-card {
+  background: var(--surface, #111111);
+  border: 1px solid var(--border-crimson, rgba(227, 24, 55, 0.30));
+  border-radius: var(--radius-xl, 20px);
+  padding: 30px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5), 0 0 20px rgba(227, 24, 55, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.order-summary-title {
+  font-family: var(--font-display, "Playfair Display", serif);
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--white, #F5F3F0);
+  margin-bottom: 22px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.summary-items-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.summary-data-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.88rem;
+}
+
+.summary-row-label {
+  color: var(--text-secondary, #B8B5B2);
+}
+
+.summary-row-value {
+  color: var(--white, #F5F3F0);
+  font-weight: 600;
+}
+
+.shipping-free-tag {
+  color: #34D399;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.summary-divider-line {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 20px 0;
+}
+
+/* Total Amount */
+.summary-total-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.total-label {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--white, #F5F3F0);
+}
+
+.total-amount-crimson {
+  font-family: var(--font-sans);
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--crimson-bright, #FF1744);
+  letter-spacing: -0.02em;
+}
+
+/* Checkout Button */
+.order-checkout-btn {
+  width: 100%;
+  height: 48px;
+  background: var(--crimson, #E31837);
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--radius-pill, 999px);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(227, 24, 55, 0.35);
+  transition: var(--transition-fast);
+}
+
+.order-checkout-btn:hover:not(:disabled) {
+  background: #FF2348;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(227, 24, 55, 0.5);
+}
+
+.order-checkout-btn.is-disabled,
+.order-checkout-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  background: #8B1025;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Guarantee Badge */
+.secure-checkout-guarantee {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 16px;
+  font-size: 0.75rem;
+  color: var(--text-muted, #77736F);
+}
+
+.secure-lock-icon {
+  font-size: 0.82rem;
+  color: var(--text-muted, #77736F);
+}
+
+@media (max-width: 480px) {
+  .luxury-order-summary-card {
+    padding: 22px 18px;
+  }
+
+  .total-amount-crimson {
+    font-size: 1.35rem;
+  }
+
+  .order-checkout-btn {
+    height: 46px;
+    font-size: 0.8rem;
+  }
+}

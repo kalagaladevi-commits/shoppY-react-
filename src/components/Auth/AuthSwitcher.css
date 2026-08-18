@@ -1,0 +1,43 @@
+/* ==========================================================================
+   AUTH SWITCHER — CRIMSON + BLACK BOLD LUXURY
+   ========================================================================== */
+
+.luxury-auth-switcher {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 46px;
+  background: #0B0B0B;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: var(--radius-pill, 999px);
+  padding: 4px;
+  margin-bottom: 28px;
+  position: relative;
+  user-select: none;
+}
+
+.auth-switcher-tab {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary, #A7A3A0);
+  font-family: var(--font-sans);
+  font-size: 0.86rem;
+  font-weight: 600;
+  border-radius: var(--radius-pill, 999px);
+  text-decoration: none !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.auth-switcher-tab:hover:not(.is-active) {
+  color: var(--white, #F5F2EE);
+}
+
+.auth-switcher-tab.is-active {
+  background: var(--crimson, #D20A2E);
+  color: #FFFFFF !important;
+  font-weight: 700;
+  box-shadow: 0 0 20px rgba(210, 10, 46, 0.35);
+}
